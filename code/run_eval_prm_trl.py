@@ -237,12 +237,36 @@ def main():
         type=str,
         default="all",
         choices=["gsm8k", "math", "olympiadbench", "omnimath", "all"],
+        help="The configuration to run from the dataset, by default will use 'all'.",
     )
-    parser.add_argument("--model_name", type=str, required=True)
-    parser.add_argument("--output_dir", type=str, default="./outputs")
-    parser.add_argument("--sep", type=str, default="\n")
-    parser.add_argument("--batch_size", type=int, default=32)
-    parser.add_argument("--max_elements", type=int, default=-1)
+    parser.add_argument("--model_name", type=str, required=True, help="")
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default="./outputs",
+        help="The path to save the results to.",
+    )
+    parser.add_argument(
+        "--sep",
+        type=str,
+        default="\n",
+        help="Separator of the model, ensure it corresponds to the same one used during training.",
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=32,
+        help=(
+            "The number of examples to run in a single batch. Each question has multiple steps, "
+            "and a batch can contain multiple from different questions to speed up the process."
+        ),
+    )
+    parser.add_argument(
+        "--max_elements",
+        type=int,
+        default=-1,
+        help="Number of elements to run. Helpful for testing, by default will run the full dataset.",
+    )
 
     args = parser.parse_args()
 
