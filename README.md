@@ -98,7 +98,7 @@ options:
 
 * Analyzing the results:
 
-The following output corresponds to [plaguss/Qwen2.5-Math-7B-Instruct-PRM-0.2](https://huggingface.co/plaguss/Qwen2.5-Math-1.5B-Instruct-PRM-0.2):
+The following output corresponds to [plaguss/Qwen2.5-Math-7B-Instruct-PRM-0.2](https://huggingface.co/plaguss/Qwen2.5-Math-7B-Instruct-PRM-0.2):
 
 ```bash
 Individual Results:
@@ -112,4 +112,4 @@ Weighted Averages:
 Weighted      -> Precision: 30.09  Recall: 63.81  F1 Score: 40.38
 ```
 
-It yields the individual results, and finally the weighted average by the number of examples in in subset. The weighted F1 Score corresponds to the value shown in the reference paper to compare.
+It yields the individual results, and finally the weighted average by the number of examples in subset. The weighted F1 Score corresponds to the value shown in the reference paper to compare.
